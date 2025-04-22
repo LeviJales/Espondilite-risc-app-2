@@ -70,4 +70,4 @@ if st.button("Analisar risco"):
     else:
         st.success("Baixo risco — manter acompanhamento clínico.")
 
-corrigir cache
+
