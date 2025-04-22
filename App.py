@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -7,8 +6,8 @@ from sklearn.ensemble import RandomForestClassifier
 st.image("logo.png", width=150)
 st.title("Análise de Risco de Espondilite Anquilosante")
 
-# Função para carregar modelo otimizado
-@st.cache_resource
+# Função para carregar modelo otimizado com cache compatível
+@st.cache(allow_output_mutation=True)
 def carregar_modelo_otimizado():
     np.random.seed(42)
     n = 1000
@@ -70,3 +69,4 @@ if st.button("Analisar risco"):
         st.error("Alto risco — considerar avaliação especializada.")
     else:
         st.success("Baixo risco — manter acompanhamento clínico.")
+
