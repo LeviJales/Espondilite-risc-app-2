@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
-st.image("logo.png", width=150)
 st.title("Análise de Risco de Espondilite Anquilosante")
 
 # Função para carregar modelo otimizado com cache compatível
